@@ -10,7 +10,7 @@ export default {
     };
     
     const token = context.rootGetters.token;
-    debugger
+    
     const response = await fetch(
       `https://coaches-8a223-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=` + token,
       {
@@ -18,8 +18,6 @@ export default {
         body: JSON.stringify(coachData)
       }
     );
-
-    // const responseData = await response.json();
 
     if (!response.ok) {
       // error ...
